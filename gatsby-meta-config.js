@@ -100,9 +100,9 @@ module.exports = {
         date: '2021.02 ~ 2021.03',
         activity: '개인 블로그 디자인 및 개발',
         links: {
-          post: '/zoomkoding-gatsby-blog-introduction',
-          github: 'https://github.com/zoomkoding/college-timetable',
-          demo: 'https://gatsby-starter-zoomkoding.netlify.app',
+          post: '/gatsby-starter-zoomkoding-introduction',
+          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+          demo: 'https://www.zoomkoding.com',
         },
       },
       {
@@ -148,9 +148,9 @@ module.exports = {
         techStack: ['gatsby', 'react'],
         thumbnailUrl: 'zoomkoding.png',
         links: {
-          post: '/why-dev-blog',
-          github: 'https://github.com/zoomkoding/college-timetable',
-          demo: 'https://gatsby-starter-zoomkoding.netlify.app',
+          post: '/gatsby-starter-zoomkoding-introduction',
+          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+          demo: 'https://www.zoomkoding.com',
         },
       },
       {
