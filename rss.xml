@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Oct 2021 08:26:31 GMT</lastBuildDate><item><title><![CDATA[시작]]></title><description><![CDATA[안녕하세요.]]></description><link>https://gxxrxn.github.io/blog-start/</link><guid isPermaLink="false">https://gxxrxn.github.io/blog-start/</guid><pubDate>Thu, 07 Oct 2021 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요.&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 Oct 2021 17:26:06 GMT</lastBuildDate><item><title><![CDATA[시작]]></title><description><![CDATA[멋진 Github 프로필을 만들어 보자. 소개 보기좋은 떡이 먹기도 좋다. README.md 파일을 활용해서 머찐 Github 프로필을 만들어 보자!  1. username/README.md 생성 은 특별한 레포이다. ✨ 자신의 Github…]]></description><link>https://gxxrxn.github.io/github-profile/</link><guid isPermaLink="false">https://gxxrxn.github.io/github-profile/</guid><pubDate>Fri, 29 Oct 2021 14:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;멋진-github-프로필을-만들어-보자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A9%8B%EC%A7%84-github-%ED%94%84%EB%A1%9C%ED%95%84%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4-%EB%B3%B4%EC%9E%90&quot; aria-label=&quot;멋진 github 프로필을 만들어 보자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;멋진 Github 프로필을 만들어 보자.&lt;/h1&gt;
+&lt;h2 id=&quot;소개&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;소개 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소개&lt;/h2&gt;
+&lt;p&gt;보기좋은 떡이 먹기도 좋다.&lt;br&gt;
+README.md 파일을 활용해서 머찐 Github 프로필을 만들어 보자!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAADOElEQVQ4y41T227bRhDVP/UDin5Gc3Ht2HGSBkX0lq9oH1Ih4EOANqmf8w2p+xgbvVmyRIkSdaEoiuJdXC65S57OLhUHBfrQBUbDXcycmTNn1DHN0ZfL5eKn+dx+tVote+u106N7bzIZ90zT7I3HZq/f7/cGg35vOrV6ljXR5jgrbYf4H+25/YZyHnaOTh6/fPZdF8dnT3F8eo7735zi6OQcZ0+f49H5M5w9eY7T82/x4PgMXz88wb2jR7h38PfVN9kDynlM8eTfd276gxfzxRJkzJ67wpouhG3PhWVNhWmOxYT8eGJpux2OtI3ofTqzKXbWmjXli+USw5H5rlOWvIv2VKhX5PbtralRFQX+55Hqp5byosNY3s2yDN//8KoafPgCyN+iFIAQJcqqQlm2JqX8nN40VK/Wn9mewRr8JmXhImfiokNgXSEkLi8vK88dto02FJjGsCYWXNeF57lI0pSKCF2kIvCKclReRW9p7MlGFmAFv+ikafqZclscQtaQoYfdaIokWCGPh7iZeLi6vsLH4S1ML8TtMkB/tGwTDpSJ7UVnv9934ziBs3arre+jqjQuWJ5T9Rp1rWIb6rrRtFVHJb0LSW9Eu6F3VhRSjYUx1nZIoMSfVWR3s8pZAWcbIC84tv4OYRSj4KUG9OMcKc2OAPR8OS+lon8HqC6chhPFqQaqa10Vs5mFJMtx9fufuP7jL/hBRIAEUOQEVFIBrsBUlwfKrBUlJ3ruZkOAsaagDiepo4yTCAKSqGmq1I2QJELOUZRSU1ZGnUslUlGwdm08P8R641WK7idAVjD4UaYF+iSWSlYFtmGKhCgrxTl1iprQac66Qwje/dv24MX5QeVGJ1dVCUHBSqSKQP5zm6lYQ+O5nnP50S5oFJry/sU2zLHb+QUtqyBAbSSQ8KNQhEks0iwTNCtRFFzs6X3PmchYLpI00/7Dbcp/HeUK8B2tDXtpbzjCwP9XdUXFiWgXkwi7NKJ/RI5wn2CT7OBnEcIsgRv7CHh8l0MF33cWi/lXnCW/kDivgyAwtIWBsd36hrNaG4vlylg5jkE7anj+VvudHxiOuzZuZkPD9TaGvwtf+7vg5/V6ffwPuCmFs87j2ycAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;blog-1&quot;
+        title=&quot;blog-1&quot;
+        src=&quot;/static/39ffdcb7db78d33439ad21dee31dd3f4/37523/blog-1.png&quot;
+        srcset=&quot;/static/39ffdcb7db78d33439ad21dee31dd3f4/e9ff0/blog-1.png 180w,
+/static/39ffdcb7db78d33439ad21dee31dd3f4/f21e7/blog-1.png 360w,
+/static/39ffdcb7db78d33439ad21dee31dd3f4/37523/blog-1.png 720w,
+/static/39ffdcb7db78d33439ad21dee31dd3f4/302a4/blog-1.png 1080w,
+/static/39ffdcb7db78d33439ad21dee31dd3f4/07a9c/blog-1.png 1440w,
+/static/39ffdcb7db78d33439ad21dee31dd3f4/6149e/blog-1.png 2784w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-usernamereadmemd-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-usernamereadmemd-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;1 usernamereadmemd 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. username/README.md 생성&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;username/username&lt;/code&gt;&lt;/strong&gt;은 특별한 레포이다. ✨&lt;br&gt;
+자신의 Github username과 같은 이름의 레포를 만들면, 해당 레포의 README.md 파일을 통해 Gihub에 프로필을 띄울 수 있다.&lt;br&gt;
+아래 사진처럼 Public, Add a README file 을 선택하고 Repository를 생성한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 81.11111111111111%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACzklEQVQ4y4WTXU/TYBTHe+mtH8BvYIYR441fw8TERBMIURgK8jIEvZONhWC8MyYmmmjjld+A4I28xMRtsJWN0a1bnXt/Y1vf+7TP8bTdCJCBJ/ntdD3P+fd/nj5ldjY3b8T39z4nktw3/pj/mslk2KP0ERtPxJEEm+A4NhqNsr8jEZY7PGQ5/O9knudZPsO7OZlKfsH737e3t+8x9x88vBtYfg1zi8swMxeAyWcvYHp2HhZfvoL5wAosLHl5emYenkw9h6f+GY/p2dM8hT0LSyvweGxiktna+nG7Uq0pjUbTrtcbJkIyWYHwfJakj3mSz4ukWq2RcqXap0LK5Qqp1urEWVtDMOvYD5FIdIyJxw9GAcAAL6iDoqi03VNps6dTwyTUpuBhU2q52HSwtg9xmguFwjgTiURGTdM0KMUODNu2QVNVoJYFtHMCIEsAFvG4EI4u9YI4/YIgjDO44aOEENehU3Gy0CpDtChCLJmF6EEa9g8zwHGIWIR4tYq1MgjdOlqzHX+ngrlcbrhg+uQvbGYzsFP8A7tFAfbKefhVEWGvlEPy8LMgAHdSQDnrakFPkoKsKKCoCtjUGRNdYCN1mvHayxZYtgX95zu/Vzvsyhp0Ol0wTQt0w3QxXAhYFvqy6GD/Bj1XC+qqBK1WC52q6BTBbBgGCnmuKNCz+XLB/sRQb7ahWCpDE0U1TQdN18F5+9RbcpH/O2x3elAqV1x3qqYhOsi6s2/09LAO4jJBvV+03YMtKbRea1JdMyi6oyhIFZ1QYtFhYZ97y7FY7A6Oc+7U1uQmZNslaMs9QFF3bMUd3QTNpDAk3JuiKE4wu7u7t7rdbkvBkGW5h0hCXZSSlbTU6DYl/GokLPWRJac+hA7WIZVKPWL8fv+1cDh8c21tbSQUCvmCyIe3732f3n30bYQ3fG9WV33BYNC3igSDIRdn3Vmw17e+vj4SCASu/wNAfV6tFt3LmAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;blog-2&quot;
+        title=&quot;blog-2&quot;
+        src=&quot;/static/804f18f82c682d2fb8ee4576930f4665/37523/blog-2.png&quot;
+        srcset=&quot;/static/804f18f82c682d2fb8ee4576930f4665/e9ff0/blog-2.png 180w,
+/static/804f18f82c682d2fb8ee4576930f4665/f21e7/blog-2.png 360w,
+/static/804f18f82c682d2fb8ee4576930f4665/37523/blog-2.png 720w,
+/static/804f18f82c682d2fb8ee4576930f4665/302a4/blog-2.png 1080w,
+/static/804f18f82c682d2fb8ee4576930f4665/07a9c/blog-2.png 1440w,
+/static/804f18f82c682d2fb8ee4576930f4665/60708/blog-2.png 2872w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You found a secret! username/username is a ✨special ✨ repository that you can use to add a README.md to your GitHub profile. Make sure it’s public and initialize it with a README to get started.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item></channel></rss>
