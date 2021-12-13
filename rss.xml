@@ -1,4 +1,208 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Dec 2021 14:57:37 GMT</lastBuildDate><item><title><![CDATA[Vanilla JS로 컴포넌트, tab 메뉴 구현하기]]></title><description><![CDATA[Vanilla Javascript로 웹 컴포넌트 구현하기 해당 내용은 개발자 황준일님의 블로그 글을 읽고 정리한 내용입니다. 더 자세한 내용과 코드는 해당 블로그를 참고해주세요! 상태관리의 탄생 배경 브라우저와 Javascript…]]></description><link>https://gxxrxn.github.io/vanilla-js-tab-component/</link><guid isPermaLink="false">https://gxxrxn.github.io/vanilla-js-tab-component/</guid><pubDate>Thu, 09 Dec 2021 19:12:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;vanilla-javascript로-웹-컴포넌트-구현하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vanilla-javascript%EB%A1%9C-%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot; aria-label=&quot;vanilla javascript로 웹 컴포넌트 구현하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vanilla Javascript로 웹 컴포넌트 구현하기&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Dec 2021 15:32:06 GMT</lastBuildDate><item><title><![CDATA[JavaScript localStorage에 객체 저장하기 (feat. 우테코 프리코스 3주차)]]></title><description><![CDATA[우아한 테크코스 3주차 프리코스 미션을 구현하는데 등장한 낯선 .. 제대로된 코드를 작성하기 전에 미리 localStorage를 공부하면서 필요한 객체를 저장하고 꺼내보는 연습을 하자!
+ 👀 들어가기에 앞서.. 우아한 테크코스…]]></description><link>https://gxxrxn.github.io/js-localstorage/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-localstorage/</guid><pubDate>Sun, 12 Dec 2021 04:00:00 GMT</pubDate><content:encoded>&lt;p&gt;우아한 테크코스 3주차 프리코스 미션을 구현하는데 등장한 낯선 &lt;code class=&quot;language-text&quot;&gt;localStorage&lt;/code&gt;..&lt;br&gt;
+제대로된 코드를 작성하기 전에 미리 localStorage를 공부하면서 필요한 객체를 저장하고 꺼내보는 연습을 하자!
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-들어가기에-앞서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0%EC%97%90-%EC%95%9E%EC%84%9C&quot; aria-label=&quot; 들어가기에 앞서 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👀 들어가기에 앞서..&lt;/h2&gt;
+&lt;p&gt;우아한 테크코스 3주차 프리코스 미션은 자판기를 구현하는 것이다.
+자판기는 크게 3개의 기능이 있는데,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;상품 추가가 가능한 상품 관리 기능&lt;/li&gt;
+&lt;li&gt;자판기 동전 충전 기능&lt;/li&gt;
+&lt;li&gt;자판기로 상품을 구매할 수 있는 기능&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이다.&lt;br&gt;
+자세한 내용은 &lt;a href=&quot;https://github.com/woowacourse/javascript-vendingmachine-precourse&quot;&gt;미션 저장소&lt;/a&gt;를 통해 확인할 수 있다.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;-저장할-객체-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%A0%80%EC%9E%A5%ED%95%A0-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1&quot; aria-label=&quot; 저장할 객체 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✅ 저장할 객체 생성&lt;/h2&gt;
+&lt;p&gt;먼저 미션 구현을 위해 어떤 객체를 localStorage에 저장해야 하는지를 생각해봐야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;상품 관리 (Stock)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;상품명 (productName)&lt;/li&gt;
+&lt;li&gt;가격 (price)&lt;/li&gt;
+&lt;li&gt;수량 (remaining)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자판기 잔돈 관리 (Change)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;500원 (coin500)&lt;/li&gt;
+&lt;li&gt;100원 (coin100)&lt;/li&gt;
+&lt;li&gt;50원 (coin50)&lt;/li&gt;
+&lt;li&gt;10원 (coin10)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;일단은 이정도 엔티티이면 충분할 것 같다! 자바스크립트 코드로 간단한 클래스를 작성해보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Stock&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;items &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;addItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; remaining &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;items&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; price&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; remaining &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stock &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Stock&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+stock&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;콜라&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; price&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; remaining&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Change&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;coins &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token number&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;size&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; count&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;coins&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; count&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; change &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Change&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+change&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+change&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;-localstorage-이해하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-localstorage-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0&quot; aria-label=&quot; localstorage 이해하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;❓ localStorage 이해하기&lt;/h2&gt;
+&lt;p&gt;localStorage는 웹 스토리지 객체(web storage object) 중 하나이다.
+localStorage를 사용해서 키-값 쌍의 데이터를 저장해두면, 페이지를 새로 고침하거나 브라우저를 재실행해도 데이터가 사라지지 않고 남아있다.&lt;/p&gt;
+&lt;p&gt;참고로 Storage에 저장된 데이터는 &lt;code class=&quot;language-text&quot;&gt;관리자 도구 &gt; Application &gt; Local Strorage&lt;/code&gt; 에서 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;이제 위에서 작성한 객체들을 localStorage에 저장해보자!&lt;/p&gt;
+&lt;h3 id=&quot;1-데이터-저장하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0&quot; aria-label=&quot;1 데이터 저장하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 데이터 저장하기&lt;/h3&gt;
+&lt;p&gt;localStorage에 데이터를 저장하는 방법은 일반 객체와 비슷하다.
+크게 3가지 방법이 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;key &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+localStorage&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;객체-데이터-저장하기---jsonstringify&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0---jsonstringify&quot; aria-label=&quot;객체 데이터 저장하기   jsonstringify permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체 데이터 저장하기 - JSON.stringify()&lt;/h4&gt;
+&lt;p&gt;localStorage에 데이터를 저장할 때 주의할 점이 있는데, 바로 키와 값은 모두 문자열이어야 한다는 것이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Stock&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stock&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// (X) [object Object]&lt;/span&gt;
+localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Change&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; change&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// (X) [object Object]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;객체 데이터를 그대로 저장하게 되면, 아래 사진처럼 값이 제대로 저장되지 않는다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABTElEQVQoz5WR63KCMBCF8yCFJCRQtdwSQFGpKFOLl44zzrTT93+S0wRsvf7pj2922bM5bLIkyyeI0wxRrBElGlpp5AYVJ0iiCFmqkEZxh2C0IzG51WxfEsYI4xw6Mf1hBDKvatTLBokxdRwKtdhhUB/hTbYQ0x28so+/FJtvpM0Rcrbvvm2UM6vtu5woXSAvSgTPL3Bdjmi+gawOcPN30PHmhhbp2yfU+gvc/JAW7Z1OprMKOiswGIbwgyE442COA+a61zguuEtBTXSfHugnSL1cYf9xQNtuMSmnkMaUMgnGfdArTM3ze+60M8ROV70uzVIUpD/sD15Auehh4lxj4ly/gZTTCqtm/dfMzQSUih5rYqc9wc0ElsvaLd1S+ukGnaEnAozy2CxHIShGYMqY6F+Ci/wxpBiXWNSNeb85hDyZygCeH4BJcz0h/sUPjSoM0HLcUCUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;result1&quot;
+        title=&quot;result1&quot;
+        src=&quot;/static/331ba031f1cb98264c4e40eaf7a096ca/37523/result1.png&quot;
+        srcset=&quot;/static/331ba031f1cb98264c4e40eaf7a096ca/e9ff0/result1.png 180w,
+/static/331ba031f1cb98264c4e40eaf7a096ca/f21e7/result1.png 360w,
+/static/331ba031f1cb98264c4e40eaf7a096ca/37523/result1.png 720w,
+/static/331ba031f1cb98264c4e40eaf7a096ca/302a4/result1.png 1080w,
+/static/331ba031f1cb98264c4e40eaf7a096ca/07a9c/result1.png 1440w,
+/static/331ba031f1cb98264c4e40eaf7a096ca/f3015/result1.png 1804w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;따라서 객체를 저장할 때는 반드시 &lt;code class=&quot;language-text&quot;&gt;JSON.stringify()&lt;/code&gt; 로 객체를 문자열로 바꾼 후 저장해야한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Stock&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;stock&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Change&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;change&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVQoz32S/U7CMBTF9yCs69jmGK5dWzbdgE3AD75EhJj4/k9y7C2KIVH++OU07em5ub31zOgOuVAWDSENtDYojYGSEoUQMEpBWdWyQMQDC4PMhUMXyukwJ//J5zXjFuNJhygZwPcDqHaFbHZEWK8RNRv0a0vzy2j5CfV4hHh4Q24Rs71d7zBsd4jHW3jaVLivJ0jSIRjjyMfPSNo9WPmC4G55SbXE7ewdxeIIuThAzg9QTx/Iplskzcp5vLqZwNjQbCiQ3GQIeR/c98EZu8RnCFmAwCrr+VYtvW/sHkE+r+tm2L7usFpvQOEUGvAYPEwQOOKz8n5yIvwb8nlKl2i7uRsIhXG6+A+hC7MFePQvruXHp+XZSJdY0Hf4LDzrz5o814p6ypQQhUFsp0zmNMshdQU9qjAq7yHtmbFK36usavfWP4X/wiMTtVw3UxdKm3F6i3RwgqZPOrCFiChOr7b8BWPiDdfQXGHQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;result2&quot;
+        title=&quot;result2&quot;
+        src=&quot;/static/1df6eca37b7d17a3ac557b22a232e43e/37523/result2.png&quot;
+        srcset=&quot;/static/1df6eca37b7d17a3ac557b22a232e43e/e9ff0/result2.png 180w,
+/static/1df6eca37b7d17a3ac557b22a232e43e/f21e7/result2.png 360w,
+/static/1df6eca37b7d17a3ac557b22a232e43e/37523/result2.png 720w,
+/static/1df6eca37b7d17a3ac557b22a232e43e/302a4/result2.png 1080w,
+/static/1df6eca37b7d17a3ac557b22a232e43e/07a9c/result2.png 1440w,
+/static/1df6eca37b7d17a3ac557b22a232e43e/24def/result2.png 1812w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-데이터-불러오기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0&quot; aria-label=&quot;2 데이터 불러오기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 데이터 불러오기&lt;/h3&gt;
+&lt;p&gt;저장할 때 설정한 key로 값을 얻을 수 있다. 이 때 getItem 메서드를 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;객체-데이터-불러오기---jsonparse&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0---jsonparse&quot; aria-label=&quot;객체 데이터 불러오기   jsonparse permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체 데이터 불러오기 - JSON.parse()&lt;/h4&gt;
+&lt;p&gt;앞에서 언급했듯이 스토리지에 저장된 값은 문자열이다. getItem으로 읽어온 데이터 또한 문자열이다.
+이를 자바스크립트 객체로 사용하기 위해서는 &lt;code class=&quot;language-text&quot;&gt;JSON.parse()&lt;/code&gt; 를 통해 &lt;strong&gt;문자열을 object로 전환&lt;/strong&gt;하는 과정이 필요하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stockItems &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Stock&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; coins &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Change&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABsklEQVQ4y5VS2ZKbMBD0f2QNiBtxSMjYYjlMau21kzzlJf//KZ3ROGyc2trEeWiYQqKnp3s2fhBBtx26YYG2E8zugJfTBfM0YxiuqNsFn562cPe2vg/PDwghtp6A58B1wOeBiLFxRRxnaKYzmvGMbt9jmhbY0ytSs0MUpShkjSQrIAuLPGuR5RKyVMhlhTSrUJUHJnNcGy6oS0oX5O4ZilRWpYFfNgjqBmlaIC9uhJUcibSjBkRSt5BVQ2eK7tvfhKvUrKig9iPhGdpYqMaQGskW2H5Ea/Z48jwaO6ARb2Py2L6gt89kb4QJqdD0g3EgggMRaNNhnD/jdL7yt4hsEWHyIZwo9tA9lN5xMGWtaRSFvaVAlh9khUBIHq7d15/+ho1LKc9LqPkV6viFzY6TglD9QbTW/wIr9MiPUCrU/QvyRP9ag/AhRe8U3lIWiMsWevnKKQqR0uH7ER8Z+40wovjby3ca2RJhxuk5AmeJw8MKb10jFOSd6Y8UzgGKAmooKOfnREm7tXnUR1aY0L65PXMwnUU/zFwP4xGX6zfeAHf5fj0+VCiSGsGa5J1P913/Z+Sfur96r7IPZT0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;result3&quot;
+        title=&quot;result3&quot;
+        src=&quot;/static/c3830ff503f12a27a090fa68a691eb9b/37523/result3.png&quot;
+        srcset=&quot;/static/c3830ff503f12a27a090fa68a691eb9b/e9ff0/result3.png 180w,
+/static/c3830ff503f12a27a090fa68a691eb9b/f21e7/result3.png 360w,
+/static/c3830ff503f12a27a090fa68a691eb9b/37523/result3.png 720w,
+/static/c3830ff503f12a27a090fa68a691eb9b/e5715/result3.png 768w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-데이터-삭제하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0&quot; aria-label=&quot;3 데이터 삭제하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 데이터 삭제하기&lt;/h3&gt;
+&lt;p&gt;localStorage의 데이터 삭제는 removeItem 메서드를 통해 가능하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Stock&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;removeItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Change&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;h2 id=&quot;-마무리하며&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%98%EB%A9%B0&quot; aria-label=&quot; 마무리하며 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;💬 마무리하며&lt;/h2&gt;
+&lt;p&gt;localStorage를 다루는 것은 생각보다 간단했다. (처음 접해 본 개념이라 너무 겁먹었던 것 같다..^_^)&lt;br&gt;
+하지만 localStorage를 공부하다보니 문득 이런 생각이 들었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;데이터 조그마한 부분을 수정하는데도 데이터 객체를 전부 통째로 다시 덮어써야하는건가? 🧐&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;일단 localStorage에 저장된 값을 수정하고 싶다면, 값을 바꿔서 덮어 씌우는 방법 밖에 없다.&lt;br&gt;
+이러한 비효율성을 줄이고자 한다면, 객체를 작은 부분으로 나눠 저장하는 것도 하나의 방법이 될 것 같다.&lt;br&gt;
+이 부분은 미션을 구현하면서 고민해봐야겠다!&lt;/p&gt;
+&lt;div class=&quot;table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#-%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0%EC%97%90-%EC%95%9E%EC%84%9C&quot;&gt;👀 들어가기에 앞서..&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#-%EC%A0%80%EC%9E%A5%ED%95%A0-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1&quot;&gt;✅ 저장할 객체 생성&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#-localstorage-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0&quot;&gt;❓ localStorage 이해하기&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0&quot;&gt;1. 데이터 저장하기&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0---jsonstringify&quot;&gt;객체 데이터 저장하기 - JSON.stringify()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#2-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0&quot;&gt;2. 데이터 불러오기&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0---jsonparse&quot;&gt;객체 데이터 불러오기 - JSON.parse()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%82%AD%EC%A0%9C%ED%95%98%EA%B8%B0&quot;&gt;3. 데이터 삭제하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#-%EB%A7%88%EB%AC%B4%EB%A6%AC%ED%95%98%EB%A9%B0&quot;&gt;💬 마무리하며&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Vanilla JS로 컴포넌트, tab 메뉴 구현하기]]></title><description><![CDATA[Vanilla Javascript로 웹 컴포넌트 구현하기 해당 내용은 개발자 황준일님의 블로그 글을 읽고 정리한 내용입니다. 더 자세한 내용과 코드는 해당 블로그를 참고해주세요! 상태관리의 탄생 배경 브라우저와 Javascript…]]></description><link>https://gxxrxn.github.io/vanilla-js-tab-component/</link><guid isPermaLink="false">https://gxxrxn.github.io/vanilla-js-tab-component/</guid><pubDate>Thu, 09 Dec 2021 19:12:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;vanilla-javascript로-웹-컴포넌트-구현하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vanilla-javascript%EB%A1%9C-%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0&quot; aria-label=&quot;vanilla javascript로 웹 컴포넌트 구현하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vanilla Javascript로 웹 컴포넌트 구현하기&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;해당 내용은 &lt;a href=&quot;https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/#_1-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%90%E1%85%A1%E1%86%AB%E1%84%89%E1%85%A2%E1%86%BC&quot;&gt;개발자 황준일&lt;/a&gt;님의 블로그 글을 읽고 정리한 내용입니다. 더 자세한 내용과 코드는 해당 블로그를 참고해주세요!&lt;/p&gt;
 &lt;/blockquote&gt;
