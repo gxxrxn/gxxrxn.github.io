@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 May 2022 14:48:18 GMT</lastBuildDate><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Tue, 26 Apr 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 02 May 2022 05:12:42 GMT</lastBuildDate><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Tue, 26 Apr 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 552px; &quot;
     &gt;
@@ -20,7 +20,7 @@
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;details&gt;
-  &lt;summary&gt;&lt;h1&gt;📚 목차&lt;/h1&gt;&lt;/summary&gt;
+  &lt;summary&gt;&lt;strong&gt;📚 목차&lt;/strong&gt;&lt;/summary&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://gxxrxn.github.io/react-tech-01/&quot;&gt;1장. 리액트 시작&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
