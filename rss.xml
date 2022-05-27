@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 27 May 2022 12:54:32 GMT</lastBuildDate><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Tue, 26 Apr 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 27 May 2022 13:12:32 GMT</lastBuildDate><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Tue, 26 Apr 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 552px; &quot;
     &gt;
@@ -51,16 +51,16 @@
 &lt;p&gt;💡 데이터가 변할 때마다 뷰에 어떤 변화를 줄지 고민하지 말고, 기존의 뷰를 날려버리고 처음부터 새로 렌더링하자!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;그렇게 개발된 리액트는 최대한 성능은 아끼고 편안한 사용자 경험을 제공하고자 구현된 자바스크립트 라이브러리이다.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;h2 id=&quot;11-리액트의-이해&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#11-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EC%9D%B4%ED%95%B4&quot; aria-label=&quot;11 리액트의 이해 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.1 리액트의 이해&lt;/h2&gt;
 &lt;p&gt;리액트는 구조가 MVC, MVW 등인 프레임워크와 달리, &lt;strong&gt;오직 V(View)만 신경쓰는 라이브러리&lt;/strong&gt;이다.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&quot;️-컴포넌트-component&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EF%B8%8F-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-component&quot; aria-label=&quot;️ 컴포넌트 component permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;⭐️ 컴포넌트 (component)&lt;/h3&gt;
-&lt;p&gt;컴포넌트는 리액트 프로젝트에서 특정 부분이 어떻게 생길지 정하는 선언체를 뜻한다.
+&lt;p&gt;컴포넌트는 리액트 프로젝트에서 특정 부분이 어떻게 생길지 정하는 선언체를 뜻한다.&lt;br&gt;
 컴포넌트는 재사용이 가능한 API로 수많은 기능들을 내장하고 있으며, 컴포넌트 하나에서 해당 컴포넌트의 생김새와 작동 방식을 정의한다.&lt;/p&gt;
-&lt;h4 id=&quot;-컴포넌트-vs-템플릿template&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-vs-%ED%85%9C%ED%94%8C%EB%A6%BFtemplate&quot; aria-label=&quot; 컴포넌트 vs 템플릿template permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;❓ 컴포넌트 vs 템플릿(template)&lt;/h4&gt;
-&lt;p&gt;컴포넌트는 템플리과는 다른 개념이다. 컴포넌트는 템플릿보다 좀 더 복잡하다.&lt;/p&gt;
+&lt;h4 id=&quot;컴포넌트-vs-템플릿template&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-vs-%ED%85%9C%ED%94%8C%EB%A6%BFtemplate&quot; aria-label=&quot;컴포넌트 vs 템플릿template permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컴포넌트 vs 템플릿(template)&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;컴포넌트는 템플리과는 다른 개념이다. 컴포넌트는 템플릿보다 좀 더 복잡하다.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;템플릿&lt;/p&gt;
 &lt;ul&gt;
@@ -74,20 +74,22 @@
 &lt;p&gt;사용자 화면에 뷰를 보여주는 것을 의미한다.
 리액트는 뷰를 어떻게 랜더링하길래 데이터를 변할 때마다 새롭게 리렌더링하면서도 성능을 아끼고, 최적의 사용자 경험을 제공할 수 있을까?&lt;/p&gt;
 &lt;br&gt;
-&lt;h4 id=&quot;-초기-렌더링--render&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%B4%88%EA%B8%B0-%EB%A0%8C%EB%8D%94%EB%A7%81--render&quot; aria-label=&quot; 초기 렌더링  render permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;☝🏻 초기 렌더링 : render()&lt;/h4&gt;
+&lt;h4 id=&quot;초기-렌더링--render&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B4%88%EA%B8%B0-%EB%A0%8C%EB%8D%94%EB%A7%81--render&quot; aria-label=&quot;초기 렌더링  render permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;초기 렌더링 : render()&lt;/h4&gt;
 &lt;p&gt;컴포넌트가 어떻게 생겼는지 정의하는 역할을 한다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;html 형식의 문자열을 반환하지 않고, &lt;strong&gt;뷰에 대한 정보를 지닌 객체를 반환&lt;/strong&gt;한다.&lt;/li&gt;
 &lt;li&gt;컴포넌트 내부에는 또 다른 컴포넌트가 들어갈 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;동작 방식&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;render 함수를 실행하면 내부 컴포넌트들도 재귀적으로 렌더링한다.&lt;/li&gt;
 &lt;li&gt;최상위 컴포넌트의 렌더링 작업이 끝나면, HTML 마크업을 만든다.&lt;/li&gt;
 &lt;li&gt;이를 페이지의 DOM 요소 안에 주입한다.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;br&gt;
-&lt;h4 id=&quot;-리렌더링--render-조화과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81--render-%EC%A1%B0%ED%99%94%EA%B3%BC%EC%A0%95&quot; aria-label=&quot; 리렌더링  render 조화과정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✌🏻 리렌더링 : render(), 조화과정&lt;/h4&gt;
+&lt;h4 id=&quot;리렌더링--render-조화과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81--render-%EC%A1%B0%ED%99%94%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;리렌더링  render 조화과정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;리렌더링 : render(), 조화과정&lt;/h4&gt;
 &lt;p&gt;리액트에서 뷰를 업데이트할 때는 &lt;code class=&quot;language-text&quot;&gt;업데이트 과정을 거친다&lt;/code&gt; 라고 하기보다는 &lt;code class=&quot;language-text&quot;&gt;조화 과정을 거친다&lt;/code&gt; 라고 하는 것이 더 정확한 표현이다.&lt;/p&gt;
 &lt;p&gt;컴포넌트가 데이터를 업데이트한 경우를 살펴보자.&lt;/p&gt;
 &lt;ol&gt;
@@ -98,14 +100,14 @@
 &lt;/ol&gt;
 &lt;p&gt;자바스크립트를 이용하여 두 가지 뷰를 최소한의 연산으로 비교한 후, 둘의 차이를 알아내 최소한의 연산으로 DOM 트리를 업데이트한다.&lt;/p&gt;
 &lt;p&gt;더 자세한 내용은 Virtual DOM을 알아보며 이해하도록 하자! 🤔&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;h2 id=&quot;12-리액트의-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#12-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;12 리액트의 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.2 리액트의 특징&lt;/h2&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;⭐️ DOM (Document Object Model)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;객체로 문서 구조를 표현하는 방법으로, XML, HTML을 사용하여 작성한다.
 웹 브라우저는 DOM을 활용하여 객체에 자바스크립트, CSS를 적용한다.&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;❓ DOM은 느린가?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;DOM은 느린가?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;DOM은 동적 UI에 최적화되어 있지 않다.
 따라서 규모가 큰 웹 애플리케이션에서 DOM에 직접 접근하여 변화를 주다 보면 느려진다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -113,7 +115,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;일부 문서에서는 이를 두고, 위와 같은 발언을 한다. 그러나 이는 정확한 말이 아니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;DOM 자체는 빠르다.&lt;/strong&gt;
-그러나 &lt;strong&gt;웹 브라우저 단에서 DOM에 변화가 일어나면&lt;/strong&gt; 웹 브라우저가 CSS를 다시 연산하고, 레이아웃을 구성하고, 페이지를 &lt;strong&gt;리페인트하는데 이 과정에서 시간이 허비&lt;/strong&gt;된다.
+그러나 &lt;strong&gt;웹 브라우저 단에서 DOM에 변화가 일어나면&lt;/strong&gt; 웹 브라우저가 CSS를 다시 연산하고, 레이아웃을 구성하고, 페이지를 &lt;strong&gt;리페인트하는데 이 과정에서 시간이 허비&lt;/strong&gt;된다.&lt;br&gt;
 DOM을 아예 조작하지 않을 수는 없다. 대신 DOM 조작을 최소화하여 작업하는 방식으로 개선할 수 있다.&lt;/p&gt;
 &lt;p&gt;리액트는 &lt;code class=&quot;language-text&quot;&gt;Virtual DOM&lt;/code&gt; 방식을 사용하여 DOM 업데이트를 추상화함으로써 DOM 처리 횟수를 최소화한다.&lt;/p&gt;
 &lt;br&gt;
@@ -126,9 +128,9 @@ DOM을 아예 조작하지 않을 수는 없다. 대신 DOM 조작을 최소화�
 &lt;li&gt;바뀐 부분만 실제 DOM에 적용한다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;👀 오해&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Virtual DOM을 사용한다고 해서 무조건적으로 빠른 것은 아니다.&lt;/p&gt;
-&lt;p&gt;리액트 매뉴얼에는 다음과 같은 문장이 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;👀 오해&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Virtual DOM을 사용한다고 해서 무조건적으로 빠른 것은 아니다.
+리액트 매뉴얼에는 다음과 같은 문장이 있다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;우리는 다음 문제를 해결하려고 리액트를 만들었습니다.&lt;/em&gt;&lt;br&gt;&lt;strong&gt;지속적으로 데이터가 변화하는 대규모 애플리케이션 구축하기&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -153,14 +155,14 @@ UI를 업데이트하는 과정에서 생기는 복잡함을 모두 해소하고
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#%EF%B8%8F-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-component&quot;&gt;⭐️ 컴포넌트 (component)&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-vs-%ED%85%9C%ED%94%8C%EB%A6%BFtemplate&quot;&gt;❓ 컴포넌트 vs 템플릿(template)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-vs-%ED%85%9C%ED%94%8C%EB%A6%BFtemplate&quot;&gt;컴포넌트 vs 템플릿(template)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#-%EB%A0%8C%EB%8D%94%EB%A7%81-rendering&quot;&gt;💻 렌더링 (rendering)&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#-%EC%B4%88%EA%B8%B0-%EB%A0%8C%EB%8D%94%EB%A7%81--render&quot;&gt;☝🏻 초기 렌더링 : render()&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#-%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81--render-%EC%A1%B0%ED%99%94%EA%B3%BC%EC%A0%95&quot;&gt;✌🏻 리렌더링 : render(), 조화과정&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%B4%88%EA%B8%B0-%EB%A0%8C%EB%8D%94%EB%A7%81--render&quot;&gt;초기 렌더링 : render()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81--render-%EC%A1%B0%ED%99%94%EA%B3%BC%EC%A0%95&quot;&gt;리렌더링 : render(), 조화과정&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
