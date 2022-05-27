@@ -27,10 +27,10 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c322177a588ea65f0b91.js"
+    "url": "webpack-runtime-c6b64b965863c4cff596.js"
   },
   {
-    "url": "styles.1962906babf7a8b10d99.css"
+    "url": "styles.5f234cf5342ce5ee6236.css"
   },
   {
     "url": "styles-407fe62976dc5310c43e.js"
@@ -43,16 +43,16 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c2cd565687d628fdb7d15ddd952ee9c8"
+    "revision": "9ab201800bfdc4ef15d080c4c03e95ca"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"
   },
   {
-    "url": "static/webfonts/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
+    "url": "static/webfonts/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
