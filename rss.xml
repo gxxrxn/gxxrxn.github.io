@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 27 May 2022 16:45:07 GMT</lastBuildDate><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Jun 2022 14:22:25 GMT</lastBuildDate><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQoz8WSy0rDQBSG/1hx4RO48wV8ENduFW9g8boQUbcFd+Jl7V5xUVcuAkJtalstFEWtDY20SWzSYFERW20SE9M6J9aAuOum8M3wnzOcmfnPDCwVHYOuFpsKx/Bjzg/RUGgOYMnGr6BVua1peDpcvc9U+02WVZmGZ9D8xTDgaO2MV8FnGU0mHmGX/eIPOXTGDxfPB93qpPM8UpNwcthTSKKUwX0aeQF7m8jyFF4cIx6FlAJ/gKc72hTvxdDuTiSb3Gq1JKe+n4hiZrQ3PIblMNYXMD+BpWksTmFjDZEVrM5hdpzQLulesFXUlKH6a9p527a0AVFALs5dxyBnICZwE0M+gUIKt6eo5iAc0bH6FV5EskBXtx8YnFmCpZC3pg95rvgOjbZh98d8hc5kJcFTcRZ1L8SE+bfPQW//0/VP0jHf4EzN/ROSfw4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVQoz51RPUvDUBQ90aF/QnGUTv4JR3+DsyCIW4dWUagi2obSFEGKFgtugpOLuLi4WXGwKuSjafNMoVKltK9pkya+9xK0uEU4PO5999yvczE08G9MO5JA/GSnIQydvyMTjoGBxm2qY2xi3OQGAwtRQQ75Uc+emuhr89RcHDXw+co/fRuuheAdnWfYT5gQuC181EUhA32V58NtwqzNFeQMeVgK6I3fXbkoobQ/m9/BZRnHB8hsIr2BahHnReS2oWSRWkf9Dj4Bn6T7It1ep3tf7cCrdd6S5Rzk3ZnDLVQVZFM4lXFyBGUPV2eoFLC2CkZQ7+G1+NgSG8BvLwzJMjUSbDFHLDmx4FmcwaLh2sylGsgjAjtSJBKM5YRq/QgeKvQbNSKpWJWBzhWdPlXsO/25c2x8A8QxYQMxDPYLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;javascript&quot;
         title=&quot;javascript&quot;
-        src=&quot;/static/1fec5f6d05a783ef6b065733846e8872/37523/thumnail-js.png&quot;
-        srcset=&quot;/static/1fec5f6d05a783ef6b065733846e8872/e9ff0/thumnail-js.png 180w,
-/static/1fec5f6d05a783ef6b065733846e8872/f21e7/thumnail-js.png 360w,
-/static/1fec5f6d05a783ef6b065733846e8872/37523/thumnail-js.png 720w,
-/static/1fec5f6d05a783ef6b065733846e8872/5a190/thumnail-js.png 800w&quot;
+        src=&quot;/static/0c43ac3e8398d058e0f04f4436a23116/37523/thumnail-js.png&quot;
+        srcset=&quot;/static/0c43ac3e8398d058e0f04f4436a23116/e9ff0/thumnail-js.png 180w,
+/static/0c43ac3e8398d058e0f04f4436a23116/f21e7/thumnail-js.png 360w,
+/static/0c43ac3e8398d058e0f04f4436a23116/37523/thumnail-js.png 720w,
+/static/0c43ac3e8398d058e0f04f4436a23116/5a190/thumnail-js.png 800w&quot;
         sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -68,6 +68,11 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     [Infinity, Infinity, Infinity, Infinity. Infinity],
     [Infinity, Infinity, Infinity, Infinity. Infinity],
     [Infinity, Infinity, Infinity, Infinity. Infinity]] */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://velog.io/@sy3783/JS%EB%B0%B0%EC%97%B4-%EC%B1%84%EC%9A%B0%EA%B8%B0&quot;&gt;JS팁_1. 배열 채우기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from&quot;&gt;MDN Array.from()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&quot;table-of-contents&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -84,6 +89,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;&lt;a href=&quot;#%ED%95%98%EB%82%98%EC%9D%98-%EC%88%98%EB%A1%9C-%EC%B1%84%EC%9A%B0%EA%B8%B0-1&quot;&gt;하나의 수로 채우기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot;&gt;참고&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</content:encoded></item><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Sat, 26 Mar 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
