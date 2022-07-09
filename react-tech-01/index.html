@@ -101,21 +101,24 @@ void function() {
 }()
     </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="display:flex;flex-direction:column;min-height:100vh"><main><header class="post-header-wrapper"><div class="post-header"><div class="emoji">👾</div><div class="info"><div class="categories"><a class="category" href="/posts/React">React</a></div></div><h1 class="title">[리액트를 다루는 기술] 01장</h1><div class="info">posted by <strong>Fry</strong> · <!-- -->March 26, 2022</div></div></header><div class="post-content-wrapper"><div class="post-content"><div class="markdown"><p><span
       class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 552px; "
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
     >
       <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 110.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNElEQVQ4y5WVXVMaZxTH/STpt+qNtzYzXvamk7YmV01qpxfRdqYyMZKEJLWdIrHJiNa0EQYt6KK8FHcRwgKCgrxVrBEWlv1l98HtWBVNH+bMnjk85z//8/oMYR7DMLC/5/UPkbMYQ5we22Cddkvj2mOcUc/4DtmGXq9vfPXjKrOO18Kj3W7TaDTodDrizsnJCd1u9xTA6P8uY9gH7AnDV58+ZOqeh1Jpn/B6hFg8RjqdIm5+JUlCUWRUVSUZV1F3Cui6Pgiwb5i4M8uTSS+tY4215Rh/Nxvk1AKJuEIukzf1HNsJGSWqIkfTGKdELgAap4DPvl/C88gvWAXXQuzmC2yHMyQjedR0jkzG1JNJAoEALtfTwSHbhuc/LPHy2SqLS15ezHsoFkpE/0wh+WQK2T2ksEQ+VyApp/D7/SKnVwLOOn7j16cBZCVBZCvKYf2IbKqImiyyv1cW7MLhMM1mk4yaGZxDO+Qn9xeYm/Gh7CRYXdngjTtO6LXCH54I0kqSxFaaDSmEc8bJjpIWxTxL6AJD13cLvHy+xracIBRcJxyKEvRv4lsOEpXMCqfzTDmmuHHjI9Z868LHKuhghhNe5syiVGsHZLMqm1sSu4Uc+d0sxf0CB5UysiyL/O0Vy2bI3atDnvnmFe6HKzQqTRIbGd7KRba3rL7Lk4zl+UtKo0SyZJQ91FTBbHrt6qK4JhfNkAP9yTB7UWt36Gq6GMfWuzbvjlsc/3PCQalKtVITU/QfQBvMbuzHEwv85PideqNKNBYlZop30WtWVuLB9APGx7/G5/MJfez2l2jaNYCex35ufjzGrc8/Y3R0lJGREYaHh3G73UxPT+N0OgmFQkQ2o8z9Mj84hzag4+48337holQu0qg3qFaroufspdC/Z7D+RuHFTJCeoV/GENNBN6/p3B/72Ry/ZfFnp9MVQNbWsUCtzWPJYfOQjLkYVpZC6D398pB1vUf5YJ9bn0ziGPcI8Hq9D1Cv14XUajXBuFKpcHTUNFspdzGH5xdkYvMt/sWICKXVagmxGGqaJipqicXaYm+5XVgO5w3/buGecf3SvsR36Py7YM/m/3lXBr4pfduHAQw67wFN7GVp0Gk5XAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAECAwQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB7dWI2wASD//EABsQAQABBQEAAAAAAAAAAAAAAAERAgMQEiAy/9oACAEBAAEFAq2DfF3yjHH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAbEAAABwEAAAAAAAAAAAAAAAAAECAhMlGBof/aAAgBAQAGPwJrPRDqf//EABwQAAEEAwEAAAAAAAAAAAAAAAEAEBEhMUFRgf/aAAgBAQABPyE4zwUowxQG616iLB1hE5f/2gAMAwEAAgADAAAAEOvPAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABURAQEAAAAAAAAAAAAAAAAAACBB/9oACAECAQE/EIP/xAAZEAEBAAMBAAAAAAAAAAAAAAABEQAQITH/2gAIAQEAAT8QhhUGl4vc9QFnmrMKiVKxzFCUHhC0aeGgEA9vchr/2Q=='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
         alt="리액트를 다루는 기술"
         title="리액트를 다루는 기술"
-        src="/static/e1b5c00f62e5f3cc10f8a98debbebb5f/08c0b/react_book.png"
-        srcset="/static/e1b5c00f62e5f3cc10f8a98debbebb5f/e9ff0/react_book.png 180w,
-/static/e1b5c00f62e5f3cc10f8a98debbebb5f/f21e7/react_book.png 360w,
-/static/e1b5c00f62e5f3cc10f8a98debbebb5f/08c0b/react_book.png 552w"
-        sizes="(max-width: 552px) 100vw, 552px"
+        src="/static/4627b7099cc67fd56818d98ec107e740/80e3c/react_book.jpg"
+        srcset="/static/4627b7099cc67fd56818d98ec107e740/4ec73/react_book.jpg 180w,
+/static/4627b7099cc67fd56818d98ec107e740/158ba/react_book.jpg 360w,
+/static/4627b7099cc67fd56818d98ec107e740/80e3c/react_book.jpg 720w,
+/static/4627b7099cc67fd56818d98ec107e740/47311/react_book.jpg 1080w,
+/static/4627b7099cc67fd56818d98ec107e740/644c5/react_book.jpg 1440w,
+/static/4627b7099cc67fd56818d98ec107e740/e1596/react_book.jpg 2048w"
+        sizes="(max-width: 720px) 100vw, 720px"
         style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
         loading="lazy"
       />

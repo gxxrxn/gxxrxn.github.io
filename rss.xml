@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 08 Jul 2022 14:50:49 GMT</lastBuildDate><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Jul 2022 14:57:58 GMT</lastBuildDate><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
     &gt;
@@ -93,21 +93,24 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ul&gt;
 &lt;/div&gt;</content:encoded></item><item><title><![CDATA[[리액트를 다루는 기술] 01장]]></title><description><![CDATA[1장. 리액트 시작 1.0 리액트의 탄생 많은 웹 프레임워크들은 주로 MVC, MVVM 아키텍처를 사용한다. Model : 애플리케이션에서 사용하는 데이터를 관리하는 영역 View…]]></description><link>https://gxxrxn.github.io/react-tech-01/</link><guid isPermaLink="false">https://gxxrxn.github.io/react-tech-01/</guid><pubDate>Sat, 26 Mar 2022 14:10:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 552px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 110.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNElEQVQ4y5WVXVMaZxTH/STpt+qNtzYzXvamk7YmV01qpxfRdqYyMZKEJLWdIrHJiNa0EQYt6KK8FHcRwgKCgrxVrBEWlv1l98HtWBVNH+bMnjk85z//8/oMYR7DMLC/5/UPkbMYQ5we22Cddkvj2mOcUc/4DtmGXq9vfPXjKrOO18Kj3W7TaDTodDrizsnJCd1u9xTA6P8uY9gH7AnDV58+ZOqeh1Jpn/B6hFg8RjqdIm5+JUlCUWRUVSUZV1F3Cui6Pgiwb5i4M8uTSS+tY4215Rh/Nxvk1AKJuEIukzf1HNsJGSWqIkfTGKdELgAap4DPvl/C88gvWAXXQuzmC2yHMyQjedR0jkzG1JNJAoEALtfTwSHbhuc/LPHy2SqLS15ezHsoFkpE/0wh+WQK2T2ksEQ+VyApp/D7/SKnVwLOOn7j16cBZCVBZCvKYf2IbKqImiyyv1cW7MLhMM1mk4yaGZxDO+Qn9xeYm/Gh7CRYXdngjTtO6LXCH54I0kqSxFaaDSmEc8bJjpIWxTxL6AJD13cLvHy+xracIBRcJxyKEvRv4lsOEpXMCqfzTDmmuHHjI9Z868LHKuhghhNe5syiVGsHZLMqm1sSu4Uc+d0sxf0CB5UysiyL/O0Vy2bI3atDnvnmFe6HKzQqTRIbGd7KRba3rL7Lk4zl+UtKo0SyZJQ91FTBbHrt6qK4JhfNkAP9yTB7UWt36Gq6GMfWuzbvjlsc/3PCQalKtVITU/QfQBvMbuzHEwv85PideqNKNBYlZop30WtWVuLB9APGx7/G5/MJfez2l2jaNYCex35ufjzGrc8/Y3R0lJGREYaHh3G73UxPT+N0OgmFQkQ2o8z9Mj84hzag4+48337holQu0qg3qFaroufspdC/Z7D+RuHFTJCeoV/GENNBN6/p3B/72Ry/ZfFnp9MVQNbWsUCtzWPJYfOQjLkYVpZC6D398pB1vUf5YJ9bn0ziGPcI8Hq9D1Cv14XUajXBuFKpcHTUNFspdzGH5xdkYvMt/sWICKXVagmxGGqaJipqicXaYm+5XVgO5w3/buGecf3SvsR36Py7YM/m/3lXBr4pfduHAQw67wFN7GVp0Gk5XAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAECAwQF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB7dWI2wASD//EABsQAQABBQEAAAAAAAAAAAAAAAERAgMQEiAy/9oACAEBAAEFAq2DfF3yjHH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAbEAAABwEAAAAAAAAAAAAAAAAAECAhMlGBof/aAAgBAQAGPwJrPRDqf//EABwQAAEEAwEAAAAAAAAAAAAAAAEAEBEhMUFRgf/aAAgBAQABPyE4zwUowxQG616iLB1hE5f/2gAMAwEAAgADAAAAEOvPAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABURAQEAAAAAAAAAAAAAAAAAACBB/9oACAECAQE/EIP/xAAZEAEBAAMBAAAAAAAAAAAAAAABEQAQITH/2gAIAQEAAT8QhhUGl4vc9QFnmrMKiVKxzFCUHhC0aeGgEA9vchr/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;리액트를 다루는 기술&quot;
         title=&quot;리액트를 다루는 기술&quot;
-        src=&quot;/static/e1b5c00f62e5f3cc10f8a98debbebb5f/08c0b/react_book.png&quot;
-        srcset=&quot;/static/e1b5c00f62e5f3cc10f8a98debbebb5f/e9ff0/react_book.png 180w,
-/static/e1b5c00f62e5f3cc10f8a98debbebb5f/f21e7/react_book.png 360w,
-/static/e1b5c00f62e5f3cc10f8a98debbebb5f/08c0b/react_book.png 552w&quot;
-        sizes=&quot;(max-width: 552px) 100vw, 552px&quot;
+        src=&quot;/static/4627b7099cc67fd56818d98ec107e740/80e3c/react_book.jpg&quot;
+        srcset=&quot;/static/4627b7099cc67fd56818d98ec107e740/4ec73/react_book.jpg 180w,
+/static/4627b7099cc67fd56818d98ec107e740/158ba/react_book.jpg 360w,
+/static/4627b7099cc67fd56818d98ec107e740/80e3c/react_book.jpg 720w,
+/static/4627b7099cc67fd56818d98ec107e740/47311/react_book.jpg 1080w,
+/static/4627b7099cc67fd56818d98ec107e740/644c5/react_book.jpg 1440w,
+/static/4627b7099cc67fd56818d98ec107e740/e1596/react_book.jpg 2048w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
