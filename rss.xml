@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Sep 2022 14:52:10 GMT</lastBuildDate><item><title><![CDATA[JWT 토큰 저장하기]]></title><description><![CDATA[개발 프로젝트를 진행하면서 로그인/회원가입 기능을 구현하고 있다. 백엔드 팀원들과 협의하여 access token과 refresh token으로 사용자 인증을 진행하기로 했다. JWT access token & refresh token…]]></description><link>https://gxxrxn.github.io/store-jwt-token/</link><guid isPermaLink="false">https://gxxrxn.github.io/store-jwt-token/</guid><pubDate>Sun, 21 Aug 2022 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;개발 프로젝트를 진행하면서 로그인/회원가입 기능을 구현하고 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fry]]></title><description><![CDATA[후라이의 개발일기]]></description><link>https://gxxrxn.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 05 Sep 2022 13:49:25 GMT</lastBuildDate><item><title><![CDATA[JWT 토큰 저장하기]]></title><description><![CDATA[개발 프로젝트를 진행하면서 로그인/회원가입 기능을 구현하고 있다. 백엔드 팀원들과 협의하여 access token과 refresh token으로 사용자 인증을 진행하기로 했다. JWT access token & refresh token…]]></description><link>https://gxxrxn.github.io/store-jwt-token/</link><guid isPermaLink="false">https://gxxrxn.github.io/store-jwt-token/</guid><pubDate>Sun, 21 Aug 2022 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;개발 프로젝트를 진행하면서 로그인/회원가입 기능을 구현하고 있다.&lt;/p&gt;
 &lt;p&gt;백엔드 팀원들과 협의하여 access token과 refresh token으로 사용자 인증을 진행하기로 했다. &lt;strong&gt;JWT access token &amp;#x26; refresh token 인증 방식&lt;/strong&gt;이 궁금하다면, &lt;a href=&quot;https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-Access-Token-Refresh-Token-%EC%9B%90%EB%A6%AC-feat-JWT&quot;&gt;해당 블로그&lt;/a&gt;를 참고하면 좋을 것 같다!&lt;/p&gt;
 &lt;p&gt;이제 토큰을 안전하게 저장해야 하는데… JWT 토큰은 대체 어디에 저장해야 하는 건가..!!&lt;/p&gt;
 &lt;/br&gt;
 &lt;h2 id=&quot;jwt-토큰을-안전하게-저장해야-하는-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;jwt 토큰을 안전하게 저장해야 하는 이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt; JWT 토큰을 안전하게 저장해야 하는 이유&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;**JWT 토큰**&lt;/code&gt; 은 &lt;strong&gt;인증에 필요한 정보들을 암호화시킨 JSON 형식의 토큰&lt;/strong&gt;을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;JWT 토큰&lt;/code&gt; 은 &lt;strong&gt;인증에 필요한 정보들을 암호화시킨 JSON 형식의 토큰&lt;/strong&gt;을 의미한다.&lt;/p&gt;
 &lt;p&gt;즉, 암호화되어 있다 해도 JWT 토큰에는 사용자의 중요한 정보가 담겨있고 토큰을 통해 사용자 인증을 진행하기 때문에 보안에 신경써야 한다는 의미이다!&lt;/p&gt;
 &lt;h3 id=&quot;xsscross-site-scripting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#xsscross-site-scripting&quot; aria-label=&quot;xsscross site scripting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;XSS(Cross-Site Scripting)&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;💡 CSS(Cascading Style Sheets) 약자는 이미 널리 사용되고 있기 때문에 XSS라 불린다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;XSS는 웹 애플리케이션에서 많이 나타나는 취약점의 하나로, (악성) 스크립트 코드를 삽입해 개발자가 고려하지 않은 기능을 작동하게 하는 것을 뜻한다. (&lt;a href=&quot;https://4rgos.tistory.com/1&quot;&gt;XSS 공격이란?&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;스크립트 코드로 쿠키나 세션 토큰 등의 탈취가 가능해서, 인증이나 세션 관리를 하는 사이트에 침입하거나 심각한 피해를 입힐 가능성이 있다. (&lt;a href=&quot;https://tecoble.techcourse.co.kr/post/2021-04-26-cross-site-scripting/&quot;&gt;참고&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;XSS는 웹 애플리케이션에서 많이 나타나는 취약점의 하나로, (악성) 스크립트 코드를 삽입해 개발자가 고려하지 않은 기능을 작동하게 하는 것을 뜻한다. &lt;a href=&quot;https://4rgos.tistory.com/1&quot;&gt;( XSS 공격이란? )&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;스크립트 코드로 쿠키나 세션 토큰 등의 탈취가 가능해서, 인증이나 세션 관리를 하는 사이트에 침입하거나 심각한 피해를 입힐 가능성이 있다. &lt;a href=&quot;https://tecoble.techcourse.co.kr/post/2021-04-26-cross-site-scripting/&quot;&gt;( 참고 )&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;csrfcross-site-request-forgery---사이트-간-요청-위조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#csrfcross-site-request-forgery---%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%84-%EC%9A%94%EC%B2%AD-%EC%9C%84%EC%A1%B0&quot; aria-label=&quot;csrfcross site request forgery   사이트 간 요청 위조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSRF(Cross-Site Request Forgery) - 사이트 간 요청 위조&lt;/h3&gt;
-&lt;p&gt;CSRF 또한 웹 애플리케이션의 취약점 중 하나로, 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)을 특정 웹사이트에 요청하게 만드는 공격이다. (&lt;a href=&quot;https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95&quot;&gt;CSRF 공격이란? 그리고 CSRF 방어 방법&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;CSRF 또한 웹 애플리케이션의 취약점 중 하나로, 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)을 특정 웹사이트에 요청하게 만드는 공격이다. &lt;a href=&quot;https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95&quot;&gt;( CSRF 공격이란? 그리고 CSRF 방어 방법 )&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;예를 들어, 자신이 쓰지 않은 광고성 글이 SNS에 업로드 될 수 있다.&lt;/p&gt;
 &lt;p&gt;CSRF 공격의 과정을 간단히 살펴보면, 다음과 같다.&lt;/p&gt;
 &lt;ol&gt;
@@ -20,8 +20,9 @@
 &lt;li&gt;img, a, form 등의 html 태그를 이용하여 사용자가 자신도 모르게 공격 당할 서비스의 서버로 http 요청을 보낸다.&lt;/li&gt;
 &lt;li&gt;공격 당한 서비스는 해당 사용자가 로그인된 상태이므로 해당 위조 요청을 정상적으로 수행한다.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/br&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;XSS 공격을 막는 것은 웹 보안을 위해 반드시 해야하는 최소한의 조치&lt;/strong&gt;이다.
+&lt;p&gt;📝 &lt;strong&gt;XSS 공격을 막는 것은 웹 보안을 위해 반드시 해야하는 최소한의 조치&lt;/strong&gt;이다.
 아무리 다른 공격(CSRF 등)에 대한 방어를 열심히 해도 XSS 공격이 가능하다면 아무 소용이 없다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/br&gt;
@@ -69,14 +70,18 @@ JWT 토큰을 저장하는데 localStorage를 사용하는 이유는 다음과 �
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;XSS 공격으로부터 비교적 안전&lt;/strong&gt;하다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;서버에서 &lt;strong&gt;쿠키의 &lt;code class=&quot;language-text&quot;&gt;httpOnly&lt;/code&gt; 옵션&lt;/strong&gt;을 설정하면, 클라이언트 측에서는 JavaScript 코드로 쿠키에 접근할 수 없다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;httpOnly 옵션&lt;/strong&gt;
-: HTTP 통신에서만 쿠키가 사용되어야 한다는 선언으로, JavaScript와 같은 외부 프로그램은 접근할 수 없다는 의미이다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;서버에서 &lt;strong&gt;쿠키의 &lt;code class=&quot;language-text&quot;&gt;httpOnly&lt;/code&gt; 옵션&lt;/strong&gt;을 설정하면, 클라이언트 측에서는 JavaScript 코드로 쿠키에 접근할 수 없다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;httpOnly 옵션&lt;/strong&gt;
+: HTTP 통신에서만 쿠키가 사용되어야 한다는 선언으로, JavaScript와 같은 외부 프로그램은 접근할 수 없다는 의미이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;그러나 &lt;strong&gt;자동적으로 요청 header에 포함되는 쿠키의 특성 때문에 보안 공격에 취약하다는 단점&lt;/strong&gt;이 있다.&lt;/p&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;CSRF 공격에 취약하다&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
@@ -89,8 +94,28 @@ JWT 토큰을 저장하는데 localStorage를 사용하는 이유는 다음과 �
 &lt;li&gt;httpOnly 옵션이 설정된 쿠키에는 접근할 수 없기 때문에 공격자가 토큰을 탈취할 수는 없어도, XSS 취약점이 있다면 JavaScript 코드로 토큰이 담긴 쿠키는 자동적으로 요청 header에 포함되기 때문에 위조 요청을 보낼 수는 있다. (&lt;a href=&quot;https://dev.to/cotter/localstorage-vs-cookies-all-you-need-to-know-about-storing-jwt-tokens-securely-in-the-front-end-15id&quot;&gt;참고&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;-결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot; 결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👀 결론&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;/ul&gt;
+&lt;h2 id=&quot;-결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot; 결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👀 결론&lt;/h2&gt;
+&lt;div class=&quot;table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot;&gt; JWT 토큰을 안전하게 저장해야 하는 이유&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#xsscross-site-scripting&quot;&gt;XSS(Cross-Site Scripting)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#csrfcross-site-request-forgery---%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%84-%EC%9A%94%EC%B2%AD-%EC%9C%84%EC%A1%B0&quot;&gt;CSRF(Cross-Site Request Forgery) - 사이트 간 요청 위조&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#-jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EB%B3%80%EC%88%98%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%9C%EB%8B%A4&quot;&gt;💽 JWT 토큰을 변수에 저장한다?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#%F0%9F%AA%99-jwt-%ED%86%A0%ED%81%B0%EC%9D%80-%EC%96%B4%EB%94%94%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C&quot;&gt;🪙 JWT 토큰은 어디에 저장해야할까?&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#-localstorage%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0&quot;&gt;🕸 localStorage에 저장하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#-cookie%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0&quot;&gt;🍪 cookie에 저장하기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#-%EA%B2%B0%EB%A1%A0&quot;&gt;👀 결론&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[JavaScript 특정 값으로 배열 채우기 : Array.from()]]></title><description><![CDATA[을 사용하면 다양한 값으로 배열을 채울 수 있다. 첫번째 매개변수로  혹은  를 전달하면 이를 얕게 복사해서 새로운 Array 객체를 만든다. optional…]]></description><link>https://gxxrxn.github.io/js-array-from/</link><guid isPermaLink="false">https://gxxrxn.github.io/js-array-from/</guid><pubDate>Wed, 27 Apr 2022 01:52:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
     &gt;

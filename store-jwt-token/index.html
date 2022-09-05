@@ -104,16 +104,16 @@ void function() {
 <p>이제 토큰을 안전하게 저장해야 하는데… JWT 토큰은 대체 어디에 저장해야 하는 건가..!!</p>
 </br>
 <h2 id="jwt-토큰을-안전하게-저장해야-하는-이유" style="position:relative;"><a href="#jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0" aria-label="jwt 토큰을 안전하게 저장해야 하는 이유 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a> JWT 토큰을 안전하게 저장해야 하는 이유</h2>
-<p><code class="language-text">**JWT 토큰**</code> 은 <strong>인증에 필요한 정보들을 암호화시킨 JSON 형식의 토큰</strong>을 의미한다.</p>
+<p><code class="language-text">JWT 토큰</code> 은 <strong>인증에 필요한 정보들을 암호화시킨 JSON 형식의 토큰</strong>을 의미한다.</p>
 <p>즉, 암호화되어 있다 해도 JWT 토큰에는 사용자의 중요한 정보가 담겨있고 토큰을 통해 사용자 인증을 진행하기 때문에 보안에 신경써야 한다는 의미이다!</p>
 <h3 id="xsscross-site-scripting" style="position:relative;"><a href="#xsscross-site-scripting" aria-label="xsscross site scripting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>XSS(Cross-Site Scripting)</h3>
 <blockquote>
 <p>💡 CSS(Cascading Style Sheets) 약자는 이미 널리 사용되고 있기 때문에 XSS라 불린다.</p>
 </blockquote>
-<p>XSS는 웹 애플리케이션에서 많이 나타나는 취약점의 하나로, (악성) 스크립트 코드를 삽입해 개발자가 고려하지 않은 기능을 작동하게 하는 것을 뜻한다. (<a href="https://4rgos.tistory.com/1">XSS 공격이란?</a>)</p>
-<p>스크립트 코드로 쿠키나 세션 토큰 등의 탈취가 가능해서, 인증이나 세션 관리를 하는 사이트에 침입하거나 심각한 피해를 입힐 가능성이 있다. (<a href="https://tecoble.techcourse.co.kr/post/2021-04-26-cross-site-scripting/">참고</a>)</p>
+<p>XSS는 웹 애플리케이션에서 많이 나타나는 취약점의 하나로, (악성) 스크립트 코드를 삽입해 개발자가 고려하지 않은 기능을 작동하게 하는 것을 뜻한다. <a href="https://4rgos.tistory.com/1">( XSS 공격이란? )</a>)</p>
+<p>스크립트 코드로 쿠키나 세션 토큰 등의 탈취가 가능해서, 인증이나 세션 관리를 하는 사이트에 침입하거나 심각한 피해를 입힐 가능성이 있다. <a href="https://tecoble.techcourse.co.kr/post/2021-04-26-cross-site-scripting/">( 참고 )</a></p>
 <h3 id="csrfcross-site-request-forgery---사이트-간-요청-위조" style="position:relative;"><a href="#csrfcross-site-request-forgery---%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%84-%EC%9A%94%EC%B2%AD-%EC%9C%84%EC%A1%B0" aria-label="csrfcross site request forgery   사이트 간 요청 위조 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSRF(Cross-Site Request Forgery) - 사이트 간 요청 위조</h3>
-<p>CSRF 또한 웹 애플리케이션의 취약점 중 하나로, 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)을 특정 웹사이트에 요청하게 만드는 공격이다. (<a href="https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95">CSRF 공격이란? 그리고 CSRF 방어 방법</a>)</p>
+<p>CSRF 또한 웹 애플리케이션의 취약점 중 하나로, 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)을 특정 웹사이트에 요청하게 만드는 공격이다. <a href="https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95">( CSRF 공격이란? 그리고 CSRF 방어 방법 )</a></p>
 <p>예를 들어, 자신이 쓰지 않은 광고성 글이 SNS에 업로드 될 수 있다.</p>
 <p>CSRF 공격의 과정을 간단히 살펴보면, 다음과 같다.</p>
 <ol>
@@ -121,8 +121,9 @@ void function() {
 <li>img, a, form 등의 html 태그를 이용하여 사용자가 자신도 모르게 공격 당할 서비스의 서버로 http 요청을 보낸다.</li>
 <li>공격 당한 서비스는 해당 사용자가 로그인된 상태이므로 해당 위조 요청을 정상적으로 수행한다.</li>
 </ol>
+</br>
 <blockquote>
-<p><strong>XSS 공격을 막는 것은 웹 보안을 위해 반드시 해야하는 최소한의 조치</strong>이다.
+<p>📝 <strong>XSS 공격을 막는 것은 웹 보안을 위해 반드시 해야하는 최소한의 조치</strong>이다.
 아무리 다른 공격(CSRF 등)에 대한 방어를 열심히 해도 XSS 공격이 가능하다면 아무 소용이 없다.</p>
 </blockquote>
 </br>
@@ -170,14 +171,18 @@ JWT 토큰을 저장하는데 localStorage를 사용하는 이유는 다음과 �
 <li>
 <p><strong>XSS 공격으로부터 비교적 안전</strong>하다.</p>
 <ul>
-<li>서버에서 <strong>쿠키의 <code class="language-text">httpOnly</code> 옵션</strong>을 설정하면, 클라이언트 측에서는 JavaScript 코드로 쿠키에 접근할 수 없다.</li>
-<li><strong>httpOnly 옵션</strong>
-: HTTP 통신에서만 쿠키가 사용되어야 한다는 선언으로, JavaScript와 같은 외부 프로그램은 접근할 수 없다는 의미이다.</li>
+<li>
+<p>서버에서 <strong>쿠키의 <code class="language-text">httpOnly</code> 옵션</strong>을 설정하면, 클라이언트 측에서는 JavaScript 코드로 쿠키에 접근할 수 없다.</p>
+<blockquote>
+<p><strong>httpOnly 옵션</strong>
+: HTTP 통신에서만 쿠키가 사용되어야 한다는 선언으로, JavaScript와 같은 외부 프로그램은 접근할 수 없다는 의미이다.</p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ol>
 <p>그러나 <strong>자동적으로 요청 header에 포함되는 쿠키의 특성 때문에 보안 공격에 취약하다는 단점</strong>이 있다.</p>
-<ol>
+<ul>
 <li>
 <p><strong>CSRF 공격에 취약하다</strong>.</p>
 <ul>
@@ -190,5 +195,25 @@ JWT 토큰을 저장하는데 localStorage를 사용하는 이유는 다음과 �
 <li>httpOnly 옵션이 설정된 쿠키에는 접근할 수 없기 때문에 공격자가 토큰을 탈취할 수는 없어도, XSS 취약점이 있다면 JavaScript 코드로 토큰이 담긴 쿠키는 자동적으로 요청 header에 포함되기 때문에 위조 요청을 보낼 수는 있다. (<a href="https://dev.to/cotter/localstorage-vs-cookies-all-you-need-to-know-about-storing-jwt-tokens-securely-in-the-front-end-15id">참고</a>)</li>
 </ul>
 </li>
-</ol>
-<h2 id="-결론" style="position:relative;"><a href="#-%EA%B2%B0%EB%A1%A0" aria-label=" 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👀 결론</h2></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/js-array-from/"><div class="direction">이전 글</div><div class="title">JavaScript 특정 값으로 배열 채우기 : Array.from()</div></a></div><div class="post-card-adjacent-wrapper"></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/gxxrxn">김규란</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/store-jwt-token/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-7a1566e621b43acd4b10.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-083ffb28842ea53c649a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a1d4dab63bdaa2e72779.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-10909ecfbbe13e2a0107.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-7a1566e621b43acd4b10.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-95b4cf15e63fb06a205d.js" async=""></script></body></html>
+</ul>
+<h2 id="-결론" style="position:relative;"><a href="#-%EA%B2%B0%EB%A1%A0" aria-label=" 결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👀 결론</h2>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0"> JWT 토큰을 안전하게 저장해야 하는 이유</a></p>
+<ul>
+<li><a href="#xsscross-site-scripting">XSS(Cross-Site Scripting)</a></li>
+<li><a href="#csrfcross-site-request-forgery---%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%84-%EC%9A%94%EC%B2%AD-%EC%9C%84%EC%A1%B0">CSRF(Cross-Site Request Forgery) - 사이트 간 요청 위조</a></li>
+</ul>
+</li>
+<li><a href="#-jwt-%ED%86%A0%ED%81%B0%EC%9D%84-%EB%B3%80%EC%88%98%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%9C%EB%8B%A4">💽 JWT 토큰을 변수에 저장한다?</a></li>
+<li>
+<p><a href="#%F0%9F%AA%99-jwt-%ED%86%A0%ED%81%B0%EC%9D%80-%EC%96%B4%EB%94%94%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%B4%EC%95%BC%ED%95%A0%EA%B9%8C">🪙 JWT 토큰은 어디에 저장해야할까?</a></p>
+<ul>
+<li><a href="#-localstorage%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0">🕸 localStorage에 저장하기</a></li>
+<li><a href="#-cookie%EC%97%90-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0">🍪 cookie에 저장하기</a></li>
+</ul>
+</li>
+<li><a href="#-%EA%B2%B0%EB%A1%A0">👀 결론</a></li>
+</ul>
+</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/js-array-from/"><div class="direction">이전 글</div><div class="title">JavaScript 특정 값으로 배열 채우기 : Array.from()</div></a></div><div class="post-card-adjacent-wrapper"></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2022<!-- --> <a href="https://github.com/gxxrxn">김규란</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/store-jwt-token/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-7a1566e621b43acd4b10.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-083ffb28842ea53c649a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a1d4dab63bdaa2e72779.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-10909ecfbbe13e2a0107.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-7a1566e621b43acd4b10.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-95b4cf15e63fb06a205d.js" async=""></script></body></html>
